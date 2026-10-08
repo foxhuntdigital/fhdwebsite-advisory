@@ -1,4 +1,6 @@
 import { skills } from '../content.ts'
+import coachPhotoJpg from '../assets/images/ashley-coaching.jpg'
+import coachPhotoWebp from '../assets/images/ashley-coaching.webp'
 import './Coach.css'
 
 export default function Coach() {
@@ -6,8 +8,18 @@ export default function Coach() {
     <section id="coach" className="section">
       <div className="container coach">
         <figure className="card coach__photo">
-          {/* Replace with <img src=... alt="Ashley coaching" /> once the photo is ready. */}
-          <div className="coach__placeholder">[Photo: Ashley coaching or at a whiteboard]</div>
+          <picture>
+            <source srcSet={coachPhotoWebp} type="image/webp" />
+            <img
+              src={coachPhotoJpg}
+              alt="Ashley coaching a group strength class on the gym floor"
+              width={800}
+              height={1000}
+              loading="lazy"
+              decoding="async"
+              className="coach__image"
+            />
+          </picture>
           <figcaption className="note coach__caption">coach's notes</figcaption>
         </figure>
 

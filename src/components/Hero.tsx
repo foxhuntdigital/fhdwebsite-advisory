@@ -10,8 +10,7 @@ export default function Hero() {
           <h1 className="display hero__title">Your product needs a program.</h1>
           <div className="note hero__note">not another slide deck.</div>
           <p className="on-paper hero__lede">
-            I'm Ashley. I coached on gym floors for 12 years, then ran product for 18 live fitness
-            apps at Xponential. I step in as your product and technology lead, write the plan, and
+            I'm Ashley. I coached on gym floors for 12 years, then ran digital product several fitness and wellnes brands for the past decade. I step in as your product and technology lead, write the plan, and
             get your team shipping.
           </p>
           <div className="hero__actions">

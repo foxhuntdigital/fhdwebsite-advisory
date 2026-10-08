@@ -73,6 +73,26 @@ export function PrBoardIcon({ name }: { name: PrIcon }) {
           <path d="M89 26h11v11" {...accentStroke} />
         </>
       )}
+      {name === 'heartrate' && (
+        <>
+          <rect x="38" y="8" width="40" height="68" rx="5" />
+          <path d="M53 15h10" />
+          <path d="M43 30h7l3-7 4 13 3-9 3 3h10" />
+          <text
+            x="58"
+            y="59"
+            textAnchor="middle"
+            fill="var(--sketch)"
+            stroke="none"
+            fontFamily="var(--font-display)"
+            fontWeight="800"
+            fontSize="17"
+          >
+            92
+          </text>
+          <ellipse cx="58" cy="53" rx="16" ry="12" transform="rotate(-6 58 53)" {...accentStroke} />
+        </>
+      )}
       {name === 'scan' && (
         <>
           <rect x="10" y="14" width="56" height="56" rx="5" />

@@ -4,9 +4,9 @@
 export const site = {
   name: 'Fox Hunt Digital',
   tagline: 'Product & tech advisory · fitness + wellness',
-  legalName: 'Fox Hunt Digital LLC',
-  location: 'Orange County, CA',
-  email: '[email]',
+  legalName: 'Fox Hunt Digital',
+  location: 'Southern California',
+  email: 'hello@foxhuntdigital.com',
 }
 
 export const nav = [
@@ -19,10 +19,10 @@ export const nav = [
 export const cta = { label: 'Book an assessment', href: '#book' }
 
 export const stats = [
-  { value: '18', label: 'live apps led at Xponential Fitness' },
+  { value: '26', label: 'live apps led at Xponential Fitness' },
   { value: '12 yrs', label: 'coaching clients on the floor' },
   { value: '1 → 6', label: 'products built as CPTO at Physmodo' },
-  { value: '10+ yrs', label: 'running product in fitness tech' },
+  { value: '12+ yrs', label: 'running product in fitness tech' },
 ]
 
 export const workoutLog = [
@@ -64,7 +64,7 @@ export const programBlocks: {
   },
 ]
 
-export type PrIcon = 'portfolio' | 'growth' | 'scan' | 'hardware'
+export type PrIcon = 'portfolio' | 'growth' | 'heartrate' | 'scan' | 'hardware'
 
 export const prs: {
   icon: PrIcon
@@ -78,7 +78,7 @@ export const prs: {
     company: 'Xponential Fitness',
     role: 'Sr. Director of Product',
     lift: 'Led product for the member apps across the brand portfolio, plus streaming, connected fitness and partner launches with Meta, LG and lululemon Studio.',
-    record: '18 live apps, 23 products total',
+    record: '18 live apps, 26 products total',
   },
   {
     icon: 'growth',
@@ -86,6 +86,13 @@ export const prs: {
     role: 'Xponential',
     lift: 'Turned a class-booking app into a loyalty game. Apple Health steps became a daily and weekly game show with points for free classes and partner prizes.',
     record: 'Booking app to daily habit',
+  },
+  {
+    icon: 'heartrate',
+    company: 'BFT Metrics App',
+    role: 'Xponential',
+    lift: 'Built a strength app that turned every workout into data: Polar heart rate straps, Apple Health, EVOLT body scans, challenges and nutrition. A proprietary PXI score turned that data into motivation, and a trainer dashboard showed live session metrics.',
+    record: 'Heart rate into a score members chase',
   },
   {
     icon: 'scan',
@@ -97,9 +104,9 @@ export const prs: {
   {
     icon: 'hardware',
     company: 'Inspire Fitness',
-    role: 'Director of Product',
+    role: 'Director of Product & Content',
     lift: 'Pitched an equipment manufacturer into software. Built the studio, the content operation, the production dashboard and the apps, through the merger into Centr.',
-    record: 'Hardware company to app company',
+    record: 'Hardware company to connected fitness company',
   },
 ]
 
@@ -135,8 +142,23 @@ export const plans = [
   },
 ]
 
-// The two Fox Hunt service sites. Set `href` to each live URL; until then they link nowhere.
+// Fox Hunt's small business services. Separate offerings from the product advisory,
+// hosted on the same domain. Used by the header menu and the Services section.
+export const serviceSitesMenuLabel = 'Small business'
+
 export const serviceSites = [
-  { label: 'The Short List: get your studio named by AI', href: '' },
-  { label: 'AI operators: texts that win back clients', href: '' },
+  {
+    name: 'The Short List',
+    summary: 'Get your studio named by AI',
+    description:
+      'When someone asks ChatGPT or Google for the best studio nearby, we make sure your name is on the list. Your listings, reviews and site get tuned so AI answers recommend you.',
+    href: 'https://foxhuntdigital.com/theshortlist',
+  },
+  {
+    name: 'AI Operators',
+    summary: 'Texts that win back clients',
+    description:
+      'An AI operator that texts your lapsed and new clients for you: follow-ups, rebooking nudges and win-back offers that sound like your front desk and fill open spots.',
+    href: 'https://foxhuntdigital.com/operators',
+  },
 ]

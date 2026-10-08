@@ -15,18 +15,13 @@
   transform: rotate(-2deg);
 }
 
-.coach__placeholder {
+.coach__image {
+  display: block;
+  width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
+  object-fit: cover;
   background: var(--placeholder);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 16px;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-muted);
 }
 
 .coach__caption {

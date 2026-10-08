@@ -4,19 +4,20 @@
 }
 
 .header__inner {
+  /* Full width: brand pinned to the left edge, nav to the right. */
+  max-width: none;
+  padding-inline: clamp(16px, 3vw, 40px);
   padding-block: 16px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 16px 40px;
 }
 
 .header__brand {
   display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: column;
+  gap: 2px;
   text-decoration: none;
 }
 
@@ -29,7 +30,7 @@
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--ink-muted);
+  color: var(--accent);
 }
 
 .header__nav {
@@ -46,4 +47,98 @@
 
 .header__cta {
   padding: 12px 18px;
+}
+
+/* Too narrow for one line: stack the nav under the brand, both left-aligned. */
+@media (max-width: 1339px) {
+  .header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ---------- Small business services menu ---------- */
+.services-menu {
+  position: relative;
+}
+
+.services-menu__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+}
+.services-menu__toggle:hover,
+.services-menu__toggle[aria-expanded='true'] {
+  color: var(--accent);
+}
+.services-menu__toggle[aria-expanded='true'] .services-menu__chevron {
+  transform: rotate(180deg);
+}
+
+.services-menu__panel {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 14px);
+  left: 0;
+  width: 300px;
+  padding: 14px 18px 8px;
+  box-shadow: var(--shadow);
+}
+
+.services-menu__eyebrow {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+.services-menu__panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.services-menu__panel li + li {
+  border-top: 1px dashed var(--rule);
+}
+
+.services-menu__link {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+}
+.services-menu__link:hover .services-menu__name {
+  color: var(--accent);
+}
+
+.services-menu__name {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.services-menu__summary {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+
+/* Once the nav wraps under the brand, anchor the panel to the full-width nav instead. */
+@media (max-width: 700px) {
+  .header__nav {
+    position: relative;
+  }
+  .services-menu {
+    position: static;
+  }
+  .services-menu__panel {
+    width: auto;
+    right: 0;
+  }
 }
