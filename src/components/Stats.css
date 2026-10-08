@@ -1,0 +1,22 @@
+.stats {
+  border-bottom: var(--border);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.stats__grid {
+  padding-block: 36px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+}
+
+.stats__value {
+  font-size: 72px;
+  line-height: 0.9;
+}
+
+.stats__label {
+  font-size: 15px;
+  margin-top: 6px;
+}

@@ -1,0 +1,36 @@
+.book {
+  background: var(--accent);
+  color: #fff;
+  border-bottom: var(--border);
+}
+
+.book__inner {
+  padding-block: 88px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.book__copy {
+  flex: 999 1 480px;
+  min-width: 0;
+}
+
+.book__title {
+  font-size: clamp(56px, 8vw, 110px);
+  line-height: 0.9;
+}
+
+.book__lede {
+  margin-top: 18px;
+  max-width: 560px;
+  font-size: 20px;
+}
+
+.book__form {
+  flex: 1 1 360px;
+  min-width: 0;
+  max-width: 440px;
+}

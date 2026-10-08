@@ -1,0 +1,66 @@
+.prs__heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.prs__note {
+  font-size: 30px;
+  transform: rotate(-2deg);
+}
+
+.prs__row {
+  display: grid;
+  grid-template-columns: 120px 170px minmax(0, 1fr) 230px;
+  gap: 20px;
+  padding: 22px 24px;
+  align-items: start;
+}
+.prs__row + .prs__row {
+  border-top: 1px dashed var(--rule);
+}
+
+.prs__row--head {
+  padding-block: 14px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.prs__company {
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.prs__role {
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+.prs__record {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* The design scrolled the table sideways on small screens; stack each record as a card instead. */
+@media (max-width: 900px) {
+  .prs__row--head {
+    display: none;
+  }
+  .prs__row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .prs__row + .prs__row {
+    border-top: 2px solid var(--ink);
+  }
+  .prs__icon {
+    order: -1;
+  }
+}

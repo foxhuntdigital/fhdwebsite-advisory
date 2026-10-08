@@ -1,0 +1,72 @@
+.lead-form {
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.lead-form__fields {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lead-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+}
+
+.lead-form__field input,
+.lead-form__field textarea {
+  font: inherit;
+  font-size: 17px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px dashed var(--rule);
+  padding: 6px 0;
+  border-radius: 0;
+  resize: vertical;
+}
+.lead-form__field input:focus,
+.lead-form__field textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--accent);
+}
+
+.lead-form__submit {
+  justify-content: center;
+  margin-top: 6px;
+  font-size: 18px;
+}
+.lead-form__submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.lead-form__error {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.lead-form--done {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lead-form__done-title {
+  font-size: 56px;
+  line-height: 0.9;
+}
+.lead-form__done-note {
+  font-size: 28px;
+  transform: rotate(-2deg);
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fox Hunt Digital · Product &amp; Tech Advisory for Fitness + Wellness</title>
+    <meta
+      name="description"
+      content="Fractional product and technology leadership for fitness and wellness companies. Ex-Xponential Sr. Director of Product, 12 years coaching on the floor."
+    />
+    <meta name="theme-color" content="#F4F1E8" />
+  </head>
+  <body>
+    <!--
+      Netlify detects forms by parsing static HTML at deploy time, and React renders
+      the real form client-side, so this hidden copy registers the "lead" form.
+      Keep its field names in sync with src/components/LeadForm.tsx.
+    -->
+    <form name="lead" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <textarea name="message"></textarea>
+      <input type="text" name="source" />
+      <input type="text" name="bot-field" />
+    </form>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
