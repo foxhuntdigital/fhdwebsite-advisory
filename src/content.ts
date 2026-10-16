@@ -143,7 +143,7 @@ export const plans = [
 ]
 
 // Fox Hunt's small business services. Separate offerings from the product advisory,
-// hosted on the same domain. Used by the header menu and the Services section.
+// hosted on their own subdomains. Used by the header menu and the Services section.
 export const serviceSitesMenuLabel = 'Small business'
 
 export const serviceSites = [
@@ -152,13 +152,13 @@ export const serviceSites = [
     summary: 'Get your studio named by AI',
     description:
       'When someone asks ChatGPT or Google for the best studio nearby, we make sure your name is on the list. Your listings, reviews and site get tuned so AI answers recommend you.',
-    href: 'https://foxhuntdigital.com/theshortlist',
+    href: 'https://theshortlist.foxhuntdigital.com',
   },
   {
     name: 'AI Operators',
     summary: 'Texts that win back clients',
     description:
       'An AI operator that texts your lapsed and new clients for you: follow-ups, rebooking nudges and win-back offers that sound like your front desk and fill open spots.',
-    href: 'https://foxhuntdigital.com/operators',
+    href: 'https://operators.foxhuntdigital.com',
   },
 ]
